@@ -110,6 +110,7 @@
 
 
         select {
+            cursor: pointer;
             padding-left: 10px;
             border: none;
             border-left: solid 1px black;
@@ -117,9 +118,19 @@
             width: 120px;
         }
 
+        option {
+            cursor: pointer;
+        }
+
         select:active {
             outline: none;
             border: none;
+        }
+
+        select:focus {
+
+            outline: none;
+
         }
 
         #searchResults {
