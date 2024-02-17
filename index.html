@@ -18,6 +18,10 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         img {
             display: block;
         }
@@ -28,13 +32,16 @@
         }
 
         header {
-            position: relative;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 40;
             height: 70px;
         }
 
         nav {
-
-
+            background-color: white;
+            width: 100%;
             height: 100%;
             padding: 0 60px;
             display: flex;
@@ -47,16 +54,27 @@
             text-decoration: none;
             list-style: none;
             display: flex;
+            align-items: center;
             gap: 50px;
         }
 
-        .nav-signup-btn a {
+        .nav-signup-btn {
             padding: 0.3em 1em;
             border-radius: 60px;
             background-color: #2448CA;
             font-weight: 300;
             color: white;
             font-size: 1.2rem;
+        }
+
+        .nav-signup-btn:hover {
+            background-color: #1b3aa9;
+        }
+
+        .nav-signup-btn a {
+            color: white;
+
+
         }
 
         #landingPage::after {
@@ -91,7 +109,7 @@
             color: #1f1d8a;
         }
 
-        #landingPage a {
+        #collectionBtn {
             font-size: 1.2rem;
             color: white;
             background-color: #467FF7;
@@ -99,6 +117,64 @@
             border-radius: 100px;
             margin-top: 60px;
         }
+
+        #collectionBtn:hover {
+            background-color: #2e64d8;
+        }
+
+        #collections {
+
+            padding: 40px;
+        }
+
+        #collections h1 {
+            text-align: center;
+            font-size: 3rem;
+            color: #020061;
+            margin-bottom: 40px;
+        }
+
+        #collection-set {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+        }
+
+        .img-container {
+            height: 400px;
+            width: 400px;
+            text-align: center;
+            border: solid 6px black;
+        }
+
+        .img-container img {
+            height: 100%;
+            width: 100%;
+            aspect-ratio: 1/1;
+        }
+
+        .collection-link h3 {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 1.55rem;
+        }
+
+        .set-desc {
+            color: rgb(94, 94, 94);
+        }
+
+        footer {
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6a6a6a;
+
+
+
+        }
+
+        footer p {}
     </style>
 </head>
 
@@ -107,7 +183,7 @@
         <nav>
             <img src="./Group 1.png" alt="Logo">
             <ul class="nav-options">
-                <li><a href="">Home</a></li>
+                <li><a href="./index.html">Home</a></li>
                 <li><a href="">About us</a></li>
                 <li class="nav-signup-btn"><a href="" class="nav-btn">Sign up</a></li>
             </ul>
@@ -117,24 +193,30 @@
         <section id="landingPage">
             <h1>FUN LEARN</h1>
             <h3>All your Questions and Solutions in one place</h3>
-            <a href=""> View Collections</a>
+            <a href="#collection-set" id="collectionBtn"> View Collections</a>
         </section>
         <section id="collections">
             <h1>Our Collections</h1>
-            <div class="collection-set">
+            <div id="collection-set">
                 <div class="questions-set">
-                    <div class="img-container">
-                        <img src="" alt="">
+
+                    <a href="" class="collection-link">
+                        <div class="img-container"><img src="./question_paper.jpg" alt="">
+                        </div>
                         <h3>Questions</h3>
-                        <p>All your past questions of PU and TU at one place. </p>
-                    </div>
+                    </a>
+                    <p class="set-desc">All your past questions of PU and TU at one place. </p>
+
                 </div>
                 <div class="solutions-set">
-                    <div class="img-container">
-                        <img src="" alt="">
+
+                    <a href="" class="collection-link">
+                        <div class=" img-container"><img src="./businesspartners-meeting-cafe.jpg" alt="">
+                        </div>
                         <h3>Solutions</h3>
-                        <p>All your past questions of PU and TU at one place. </p>
-                    </div>
+                    </a>
+                    <p class="set-desc">All your past questions of PU and TU at one place. </p>
+
                 </div>
             </div>
         </section>
